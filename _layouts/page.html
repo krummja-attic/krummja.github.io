@@ -13,11 +13,17 @@ layout: default
 </div>
 <div class="row justify-content-center">
   <div class="col-md-8">
-    <article lang="en">
-      {% if page.abstract %} 
+    {% if page.abstract %}
       <div class="mb-4">{{ page.abstract }}</div>
-      {% endif %}
-      {{ content | replace: '&#8617;', '&#8617;&#xfe0e;'}}
+    {% endif %}
+    <article lang="en">
+      {{ content }}
     </article>
+    {% if page.publication == true %}
+      <div class="mb-4">
+      <h3>Reference</h3>
+      {{ page.pub_author }} ({{ page.pub_year }}). {{ page.pub_title }}. {% if page.pub_from %}{{ page.pub_from }}. {% endif %}
+      </div>
+    {% endif %}
   </div>
 </div>
