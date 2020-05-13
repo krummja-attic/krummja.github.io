@@ -84,37 +84,37 @@ Simulating orbital motion is not as difficult as it may seem. The primary challe
 
 To get us off the ground (heh), we have to set some initial conditions and then model the changes to the system at each susbequent time step. *At* each given time step, we can use the **state vectors** of the system to describe the state of the system at that point. For this, we will neeed:
 
-1. A radius between the gravitating bodies.
+- A radius between the gravitating bodies.
 
   $$
   r = \sqrt{x^{2} + y^{2} + z^{2}}
   $$
 
-2. A gravitational force scalar.
+- A gravitational force scalar.
 
   $$
   f = -\frac{GM_{1}M_{2}}{r^{2}}
   $$
 
-3. A normalized direction vector (unit vector) to give the gravitational force scalar direction.
+- A normalized direction vector (unit vector) to give the gravitational force scalar direction.
 
 $$
 \hat{r}\{x, y, z\} = \frac{\{x, y, z\}}{\sqrt{x^{2} + y^{2} + z{^2}}}
 $$
 
-4. The velocity vector is constantly updated by gravitational acceleration and multiplied by the unit vector.
+- The velocity vector is constantly updated by gravitational acceleration and multiplied by the unit vector.
 
 $$
 \vec{v}_{t+1} = \vec{v}_{t} + \hat{r}f\Delta t
 $$
 
-5. The position vector is updated by velocity.
+- The position vector is updated by velocity.
 
 $$
 \vec{p}_{t+1} = \vec{p}_{t} + \vec{v}_{t+1}\Delta t
 $$
 
-6. The updated position is plotted on an output, and then the process repeats.
+- The updated position is plotted on an output, and then the process repeats.
 
 ---
 
