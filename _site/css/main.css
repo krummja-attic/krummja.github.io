@@ -1,4 +1,13 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Fira Code';
+  src: url("/assets/FiraCode-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Fira Code';
+  src: url("/assets/FiraCode-Medium.woff2") format("woff2");
+  font-weight: 500; }
 body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -11,61 +20,124 @@ body {
   background-color: #ede5d9;
   font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
   font-size: 12pt;
+  font-weight: 400;
   color: #404040; }
-  body a, body a:hover {
-    color: #c72323; }
+  body .et-symbol svg {
+    height: 0.98em;
+    position: relative;
+    top: -0.05em;
+    image-rendering: auto; }
+    body .et-symbol svg path {
+      fill: #814087;
+      fill-rule: evenodd;
+      stroke: #814087;
+      stroke-width: 3px; }
+  body a {
+    color: #95499c;
+    text-decoration: none;
+    transition: background-color 400ms; }
+    body a:hover {
+      color: #95499c;
+      background-color: rgba(149, 73, 156, 0.07);
+      text-decoration: none; }
+    body a:visited {
+      color: #95499c !important;
+      text-decoration: none !important; }
   body p {
-    line-height: 1.5; }
-  body article > :first-child {
-    min-height: 3.5em; }
-    body article > :first-child:first-letter {
-      color: #ad1f1f;
-      display: inline-block;
-      float: left;
-      font-size: 3.2em;
-      line-height: 0.7em;
-      font-style: normal;
-      font-weight: bold;
-      margin: 0.12em 0.15em 0 -0.01em; }
-  body h1 {
-    font-weight: 600; }
+    line-height: 1.7; }
+  body h1, body h2, body h3 {
+    font-family: 700;
+    line-height: 1.4em;
+    font-weight: bold; }
   body h2 {
-    margin-top: 1em;
     font-size: 1.6em;
-    margin-bottom: 0.6em; }
+    margin-top: 2em;
+    margin-bottom: 1em; }
   body h3 {
+    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
     font-size: 1.2em;
     font-variant: small-caps;
     text-transform: lowercase;
-    font-weight: bold;
     letter-spacing: 0.15em; }
+  body strong {
+    font-weight: 700; }
 
+article p {
+  hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto; }
+article .mjx-mtext span {
+  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif !important;
+  font-size: 12pt;
+  font-weight: 400; }
+article > :first-child {
+  min-height: 3.7em; }
+  article > :first-child::first-letter {
+    color: #814087;
+    float: left;
+    font-size: 3.4em;
+    line-height: .7em;
+    font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    margin: .12em .15em 0 -.02em; }
+article br {
+  display: block;
+  margin: .3em 0;
+  content: ' '; }
+article ol li, article ul li {
+  padding-left: 0; }
 article ul li {
-  padding-left: 0em;
-  margin-bottom: 0;
-  list-style: none; }
-article ul {
-  position: relative;
-  padding: 0;
-  margin-left: 0; }
-article ul > li:before {
+  list-style: none;
+  margin-bottom: 0; }
+article ol li {
+  margin-bottom: 1em; }
+@media (max-width: 768px) {
+  article ol, article ul {
+    padding-left: 1.1rem; } }
+@media (min-width: 768px) {
+  article ol, article ul {
+    padding-left: 0; } }
+article ul > li::before {
   position: absolute;
-  content: "▪";
-  color: #c72323;
-  left: -1.15em; }
-article pre, article code {
+  content: '▪';
+  color: #95499c; }
+  @media (min-width: 572px) {
+    article ul > li::before {
+      left: -1.15em; } }
+article pre, article code, article aside {
   background-color: #ede5d9; }
-article pre {
+article pre, article aside {
   padding: 1em;
   border-radius: 5px; }
+article :not(pre) > code {
+  color: #95499c;
+  font-size: 10.45pt;
+  padding: 0.1em 0.3em;
+  border-radius: 3px; }
 article code {
-  font-family: "Source Code Pro", Menlo, Monaco, Inconsolata; }
+  font-family: "Fira Code";
+  font-size: 11pt; }
+  article code table {
+    border: 0;
+    margin: 0;
+    padding: 0; }
+    article code table pre {
+      margin: 0;
+      border-radius: 0;
+      padding-top: 0;
+      padding-bottom: 0; }
+    article code table .lineno {
+      padding-left: 0;
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, 0.2); }
 
 blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
-  border-left: 2pt solid #c72323;
-  padding-left: 0.9em;
+  border-left: 2pt solid #95499c;
+  padding-left: .9em;
   margin-left: -1em;
   font-style: oblique; }
   blockquote > :last-child {
@@ -78,11 +150,10 @@ blockquote {
 
 .main {
   background-color: #f7f3ee;
-  border: 1px solid #decfba;
+  box-shadow: 0 0 5px 5px rgba(160, 160, 160, 0.05);
   margin-top: 16px;
   padding: 16px;
-  border-radius: 4px;
-  border-top: 3px solid #c72323; }
+  border-radius: 12px; }
 
 .small-ornament > svg, .big-ornament > svg {
   display: inline-block;
@@ -90,7 +161,7 @@ blockquote {
   width: 40px;
   height: 40px; }
   .small-ornament > svg path, .big-ornament > svg path {
-    fill: #ad1f1f;
+    fill: #814087;
     fill-rule: evenodd;
     shape-rendering: geometricPrecision; }
 
@@ -105,48 +176,68 @@ header {
   header p {
     margin-top: 1em; }
 
-footer {
-  margin-top: 1em;
-  margin-bottom: 1em;
+abbr {
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: .05em; }
+
+footer, .navbar {
   font-size: 10.5pt;
   color: #795f39; }
-  footer .biography {
-    margin-top: 2em;
+  footer .biography, .navbar .biography {
     padding-bottom: 1em;
     border-bottom: 1px solid rgba(222, 207, 186, 0.5);
     margin-bottom: 1em; }
-  footer h2 {
+  footer h2, .navbar h2 {
     font-size: 1.2em;
     font-variant: small-caps;
     text-transform: lowercase;
     font-weight: bold;
-    letter-spacing: 0.15em; }
-  footer a, footer a:hover {
-    color: #ad1f1f; }
+    letter-spacing: .15em; }
+  footer a.fa, .navbar a.fa {
+    color: #bfbfbf !important;
+    margin-right: .25em;
+    margin-left: .25em;
+    margin-bottom: .8em;
+    transition: color 400ms; }
+    footer a.fa:hover, .navbar a.fa:hover {
+      color: #95499c !important;
+      background-color: transparent !important; }
+
+.navbar {
+  font-size: 11.55pt; }
 
 .footnotes {
   border-top: 1px solid rgba(222, 207, 186, 0.5);
   padding-top: 1em;
   margin-top: 2em; }
-  .footnotes ul, .footnotes ol {
-    margin-left: -2em; }
-  .footnotes > ol {
-    margin-left: -1.5em; }
 
 sup > .footnote {
-  margin-left: -0.2em;
+  margin-left: .1em;
   font-style: normal; }
+  sup > .footnote::before {
+    content: '{'; }
+  sup > .footnote::after {
+    content: '}'; }
+
+.small-table {
+  font-size: 10.5pt; }
+  .small-table td {
+    vertical-align: text-top; }
+
+:not(code) > table {
+  border-spacing: 2em .1em; }
 
 table {
   margin: 0 auto;
   margin-top: 1.25em;
   margin-bottom: 1.25em;
-  border-spacing: 2em 0.1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: .5em;
+  padding-bottom: .5em;
   border-collapse: separate;
   background-color: #ede5d9;
-  border-left: 2.5pt solid #c72323; }
+  border-left: 2.5pt solid #95499c; }
   table td, table th {
     display: table-cell;
     vertical-align: inherit;
@@ -154,19 +245,21 @@ table {
     padding-top: 0;
     padding-bottom: 0; }
   table th {
-    padding-bottom: 0.6em; }
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 700;
+    font-size: 13.2pt;
+    letter-spacing: .1em;
+    padding-bottom: .6em; }
 
 /**
  * Syntax highlighting styles
  */
 .highlight .c {
-  color: #999999;
+  color: #bfbfbf;
   font-style: italic; }
 .highlight .k {
-  color: #c72323;
-  font-weight: bold; }
-.highlight .o {
-  font-weight: bold; }
+  color: #95499c; }
 .highlight .cm {
   font-style: italic; }
 .highlight .cp {
@@ -174,29 +267,29 @@ table {
 .highlight .c1 {
   font-style: italic; }
 .highlight .cs {
-  font-weight: bold;
+  font-weight: 500;
   font-style: italic; }
 .highlight .ge {
   font-style: italic; }
 .highlight .gs {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .kc {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .kd {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .kp {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .kr {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .kt {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .s {
   font-style: italic; }
 .highlight .nc {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .ne {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .nf {
-  font-weight: bold; }
+  font-weight: 500; }
 .highlight .ow {
-  font-weight: bold; }
+  font-weight: 500; }
