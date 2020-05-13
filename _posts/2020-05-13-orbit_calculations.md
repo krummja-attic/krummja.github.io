@@ -38,7 +38,7 @@ The observation of variable velocity is explained in terms of the second law. Al
 ---
 ### Excursus on Areal Velocity
 
-![](/assets/images/ArealVelocity_with_curved_area.svg.png){: width="100%"}
+![](/assets/images/ArealVelocity_with_curved_area.svg.png)
 
 Let point A represent the inflection point around which some orbiting body rotates, with points B and C representing positions of that orbiting body at two different points in time. The vector $\vec{r}(t)$ describes the position vector of the orbiting body at time $t$, while $\vec{r}(t+\Delta t)$ describes the position vector at time $t$ plus the time interval $\Delta t$.
 
