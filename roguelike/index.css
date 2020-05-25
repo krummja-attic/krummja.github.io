@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Fira Code';
-    src: url('assets/FiraCode-Regular.otf') format('opentype');
+    src: url('/assets/FiraCode-Regular.otf') format('opentype');
 }
 
 html,
@@ -15,6 +15,7 @@ canvas {
 
 hr {
     color: antiquewhite;
+
 }
 
 canvas {
@@ -40,9 +41,13 @@ canvas {
 
 #header {
     display: block;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
+    width: 84vw;
+    margin: 5px auto ;
+    font-size: 10pt;
+}
+
+#header h1 {
+    margin: 0;
 }
 
 #game {
