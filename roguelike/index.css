@@ -1,66 +1,75 @@
 @font-face {
-    font-family: 'Fira Code';
-    src: url('/assets/FiraCode-Regular.otf') format('opentype');
+  font-family: 'Fira Code';
+  src: url('/assets/FiraCode-Regular.otf') format('opentype');
 }
 
 html,
 body,
 canvas {
-    font-family: 'Fira Code', 'monospace';
-    margin: 0;
-    padding: 0;
-    color: antiquewhite;
-    background-color: black;
+  font-family: 'Fira Code', 'monospace';
+  margin: 0;
+  padding: 0;
+  color: antiquewhite;
+  background-color: black;
 }
 
 hr {
-    color: antiquewhite;
-
+  color: antiquewhite;
 }
 
 canvas {
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    border: antiquewhite 1px solid;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .flex-container {
-    display: flex;
-    flex-direction: row;
-    margin: 10px auto 30px;
-    padding: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto 30px;
+  padding: 10px;
 }
 
 .game-ui {
-    display: block;
-    width: 300px;
-    height: 620px;
-    /* border: antiquewhite 1px solid; */
+  display: block;
+  width: 300px;
+  height: 620px;
 }
 
 #header {
-    display: block;
-    width: 84vw;
-    margin: 5px auto ;
-    font-size: 10pt;
+  display: block;
+  width: 84vw;
+  margin: 5px auto ;
+  font-size: 10pt;
 }
 
 #header h1 {
-    margin: 0;
+  margin: 0;
+}
+
+#center-wrapper {
+  flex-basis: auto;
+
+  display: flex;
+  flex-direction: column;
 }
 
 #game {
-    flex-basis: auto;
+  flex-basis: auto;
+  border: antiquewhite 1px solid;
+}
+
+#bottom-panel {
+  min-height: 10em;
 }
 
 #left-panel {
-    flex-basis: auto;
-    margin: 0 10px 30px auto;
+  flex-basis: auto;
+  margin: 0 10px 30px auto;
 }
 
 
 #right-panel {
-    flex-basis: auto;
-    margin: 0 auto 30px 10px;
+  flex-basis: auto;
+  margin: 0 auto 30px 10px;
 }
