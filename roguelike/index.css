@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/assets/FiraCode-Bold.otf') format('opentype');
+}
+
 html,
 body,
 canvas {
+  font-family: 'Fira Code', 'monospace';
+  font-size: 10pt;
   margin: 0;
   padding: 0;
   color: antiquewhite;
