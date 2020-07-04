@@ -1,12 +1,6 @@
-@font-face {
-  font-family: 'Fira Code';
-  src: url('/assets/FiraCode-Regular.otf') format('opentype');
-}
-
 html,
 body,
 canvas {
-  font-family: 'Fira Code', 'monospace';
   margin: 0;
   padding: 0;
   color: antiquewhite;
@@ -23,53 +17,50 @@ canvas {
   padding: 10px;
 }
 
+
+/* Flex root */
 .flex-container {
   display: flex;
-  flex-direction: row;
-  margin: 10px auto 30px;
   padding: 10px;
 }
 
-.game-ui {
-  display: block;
-  width: 300px;
-  height: 620px;
-}
 
-#header {
-  display: block;
-  width: 84vw;
-  margin: 5px auto ;
-  font-size: 10pt;
-}
-
-#header h1 {
-  margin: 0;
-}
-
+/* Everything but the bars, baybee */
 #center-wrapper {
-  flex-basis: auto;
-
   display: flex;
   flex-direction: column;
+  flex-basis: 0;
 }
 
+/* Game console */
 #game {
-  flex-basis: auto;
-  border: antiquewhite 1px solid;
+  flex-basis: 0;
+  border: rgba(250, 235, 215, 0.5) 1px solid;
+  border-radius: 4px;
+  padding: 10px;
 }
 
+/* Important info */
 #bottom-panel {
-  min-height: 10em;
+  margin-top: 10px;
+  border: rgba(250, 235, 215, 0.5) 1px solid;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 200px;
 }
 
-#left-panel {
-  flex-basis: auto;
+/* Modal info */
+#overlay {
+  position: absolute;
+  flex-basis: 0;
+  visibility: hidden;
+}
+
+/* Aforementioned sidebars (baybeeeee) */
+.spacer {
+  flex-basis: 0;  
+  width: 300px;
+  height: 620px;
   margin: 0 10px 30px auto;
-}
-
-
-#right-panel {
-  flex-basis: auto;
-  margin: 0 auto 30px 10px;
 }

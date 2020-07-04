@@ -2,18 +2,34 @@
 
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./index.css"/>
-        <title>ROT Roguelike</title>
+        <script src="./dist/bundle.js"></script>
+        <title>simulacra</title>
     </head>
     <body>
+
         <div class="flex-container">
-            <div id="left-panel" class="game-ui"></div>
+
+            <div class="spacer"></div>
+
             <div id="center-wrapper">
-                <div id="game"></div>
-                <div id="bottom-panel" class="game-panel"></div>
+
+                <div id="game">
+
+                    <div id="overlay"></div>
+
+                </div>
+
+                <div id="bottom-panel">
+                    <!-- <input id="input"> -->
+                </div>
+
             </div>
-            <script src="./dist/bundle.js"></script>
-            <div id="right-panel" class="game-ui"></div>
+
+            <div class="spacer"></div>
+
         </div>
+
     </body>
 </html>
