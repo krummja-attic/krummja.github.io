@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Lexical Selections - Introduction
+title: Introduction
 date: 2020-08-19
 external-url:
 categories: [Lexical Selections]
 publication: false
 ---
-
-# Introduction
 
 Hello there, and welcome!
 
