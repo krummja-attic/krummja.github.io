@@ -1,9 +1,11 @@
 # Site settings
 title: "Simulacrum"
 author: "Jonathan Crum"
-description: "A blog and personal notebook."
+description: "A digital garden - a blog and personal notebook. I post intermittently about a wide variety of things, related to linguistics, writing, programming, and other side interests. I also use this site to host content for the writing courses I support at UGA."
 keywords: "Linguistics, Mathematics, Philosophy, Programming"
-biography: "I am a PhD student at the University of Georgia."
+biography: "I am a PhD student at the University of Georgia working in the area of theoretical linguistics.
+
+          My current research interests have led me to the study of incorporation phenomena; this project is part of a larger set of projects that aim to investigate the relationship between syntax and semantics, particularly as applied to the interpretation of predicates."
 colophon: "© 2019-2020 by Jonathan Crum."
 
 baseurl: ""
