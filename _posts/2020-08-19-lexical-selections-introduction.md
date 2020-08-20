@@ -3,7 +3,7 @@ layout: post
 title: Lexical Selections - Introduction
 date: 2020-08-19
 external-url:
-categories: Lexical Selections
+categories: [Lexical Selections]
 publication: false
 ---
 
