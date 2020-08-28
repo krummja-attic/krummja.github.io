@@ -11,7 +11,7 @@ Hello again, and welcome to the second post in the *Lexical Selections* series. 
 
 To begin, let's understand our *writing situation*. Linguistics is properly understood to be a constellation of related sciences, each aimed at understanding some part of the uniquely human faculty for language. Different disciplines (e.g. syntax, phonology, semantics) have some differences in how they present themselves in writing, but there are certain universals that apply no matter the area of linguistics you're in. As a starting point, let's consider a paragraph that models what you might expect to say in some of the later essays for this course:
 
-> German speakers typically do not use the past tense. Instead, they use the verbs sein, to be, and haben, to have. In English, this would be like using the perfect, which is different from tense. For example, ich habe den Film gesehen can be translated as I have seen the movie or I saw the movie. Some other examples might be Sie sind gelaufen for they have run or they ran, and du hast Blumen gepflueckt for you have picked flowers or you picked flowers.
+![](/assets/images/german1.png){: width="100%"}
 
 Alright, so that was a bit rough. If you had little or no context for what the paragraph was dealing with, I'm sure you will leave feeling a bit confused. There are some ways we can improve the basic presentational characteristics of this paragraph, and they're fairly straightforward. Let's start by taking tally of the things that we might want to adjust in the paragraph above.
 
@@ -23,15 +23,7 @@ Alright, so that was a bit rough. If you had little or no context for what the p
 
 Thankfully, each of these has a fairly straightforward answer. Issues (1) and (4) are just definitional, and can benefit from small adjustments to how they are brought up in the prose. Issue (2) is similar in that it is just a definitional issue; we can clarify by using some more precise terminology. Finally, issues (3) and (5) benefit from being subject to some very standard stylistic guidelines for the presentation of linguistic data. Let's clean up the paragraph, and then we can turn to discussing what specific changes we made.
 
-> **In everyday speech**, German speakers typically do not use the **simple** past tense **(like English *sat, played*, or *sang*)**. Instead, they use the **auxiliary** verbs *sein* 'to be' and *haben* 'to have'. In English, this would be **equivalent to** using the perfect **aspect**, which is different from tense. For example, **when a speaker utters** "Ich habe den Film gesehen", this can be translated as 'I have seen the movie' or 'I saw the movie'. **Note the following additional examples:**
-
-> (1) Sie     sind  gelaufen
->       they  have run
->      'They have run. / They ran.'
-
-> (2) Du  hast Blumen  gepflueckt
->      you have flowers  picked
->     'You have picked flowers. / You picked flowers.'
+![](/assets/images/german2.png){: width="100%"}
 
 Let's run down the list here. 
 
