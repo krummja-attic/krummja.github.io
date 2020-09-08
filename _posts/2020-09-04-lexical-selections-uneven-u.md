@@ -7,20 +7,6 @@ categories: [Lexical Selections]
 publication: false
 ---
 
-Description vs. Explanation
-How to Describe data
-    Specifically how to present data (and make up data)
-    How to refer to data in prose
-    The "Uneven-U"
-
-Use the Indonesian example write-up.
-
-Be sure to discuss re-numbering and separating the discussion from the HW context
-
-
-In this post, I want to zoom in a little bit on the technicalia of paragraph construction, with an emphasis on making an important distinction between linguistic *description* and linguistic *explanation*. This is a pretty crucial division of labor in scientific writing in general, so I'm going to devote this post and the next to unpacking these concepts.
-
-
 In this post, I want to zoom in a little bit on the technicalia of paragraph construction. The goal of this week's discussion is to begin to work out a framework that we can use to make specific decisions about the way we organize our paragraphs. Let's start out from a very broad level, divorced from the specifics of writing for linguistics. We'll focus on the basics of paragraph construction, and how it relates to the effective presentation of the content of our writing.
 
 ## The Uneven U
