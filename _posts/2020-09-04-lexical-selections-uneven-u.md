@@ -13,13 +13,7 @@ In this post, I want to zoom in a little bit on the technicalia of paragraph con
 
 One of my favorite writing books, Eric Hayot's *The Elements of Academic Style*, introduces a very useful tool for organizing paragraphs in academic writing.[^1] This tool, the **Uneven U**, is a system for assigning the internal structure of a paragraph to a specific function related to the central evidence the piece of writing aims to present. Let's look at an example before diving into definitions. The following is from a monograph written by Luis López, dealing with a certain type of noun phrase interpretation.[^2]
 
-> Linguists working in the tradition of differential object marking (DOM) (see Bossong 1985; Aissen 2003) have connected a piece of morphology with a specific interpretation. For instance, in the Spanish sentence (3), the presence of *a* before the indefinite object makes a specific reading possible; without *a*, the specific reading is impossible.
-
-> (3) María está buscando (a) un gestor.
->     Maria is   seeking      a  manager
->     'Maria is looking for a manager.'
-
-> Other linguists---in particular, Diesing (1992)---have linked specificity with scrambling. [...]
+![](/assets/lopez.png){: width="100%"}
 
 If I asked you to examine this excerpt and arrange the sentences in terms of how related they are to the example in (3), how might you go about doing so?
 
