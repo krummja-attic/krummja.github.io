@@ -96,7 +96,7 @@ We&rsquo;ll return `value`. But what exactly is `value`? It can be anything we w
         pass
 ```
 
-Let&rsquo;s get used to thinking about these in terms of their types. The method `State.ev_keydown()` is looking to take in some event of type `tcod.event.KeyDown` and will return either `None`, breaking our state loop, or `T`.
+Let&rsquo;s get used to thinking about these in terms of their types. The method `State.ev_keydown()` is looking to take in some event of type `tcod.event.KeyDown` and will return either `None`, in which case nothing at all happens, or `T`. Because we only actually return `None` in the case that we explicitly tell it to, the fact that we might sometimes return `None` is not an issue.
 
 Now, there are a ton of ways this could be implemented, but the way that I think is most flexible is to use a version of the Command pattern (on which read this wonderful section of [Game Programing Patterns](http://gameprogrammingpatterns.com/command.html)). In this implementation, we&rsquo;re going to create a tight linkage between the names of the methods and the symbols that get called when we perform certain commands, effectively allowing us to modify our command structure by (1) adding a new entry to the list of possible commands, and (2) creating a new command method. Here&rsquo;s an abstract of what I mean. First, add `Callable` and `Dict` to our import from `typing`:
 
