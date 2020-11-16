@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="hsl(35, 36%, 95%)">
+
+  <title>
+    
+    Programmatically Representing Newtonian Gravitation
+    
+  </title>
+
+  
+  <meta name="description" content="
+  
+  
+  
+  
+    Programmatically Representing Newtonian Gravitation
+    13 May 2020
+    
+      
+    
+  
+  
+
+
+
+  
+  
+    
+    
+
+    
+      Much of ..." />
+
+  
+  <meta name="keywords" content="
+  
+  
+  
+  " />
+
+  <link rel="canonical" href="http://simulacrum.space/blog/2020/05/13/orbit_calculations/">
+  <link rel="alternate" type="application/rss+xml" title="Simulacrum" href="http://simulacrum.space/feed.xml" />
+  <span itemprop='author'><meta name="author" content="Jonathan Crum"><span itemprop='author'></span>
+
+  <!-- <link href="/favicon.png" rel="icon"> -->
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/PT+Serif:400,400i,700,700i:f/Source+Code+Pro:400,600:f">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  >
+  
+  <link
+    rel="stylesheet"
+    href="/css/main.css"
+  >
+
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+      },
+
+      TeX: {
+        equationNumbers: { autoNumber: "AMS" }
+      },
+
+      CommonHTML: {
+        scale: 90
+      }
+    };
+  </script>
+  <script
+    type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"
+  ></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){
+	i['GoogleAnalyticsObject'] = r;
+	i[r] = i[r] || function() {
+	    (i[r].q = i[r].q || []).push(arguments)
+	}, i[r].l = 1 * new Date();
+	a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+	a.async = 1;
+	a.src = g;
+	m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://use.fontawesome.com/4bee85bf94.js"></script>
+
+  
+</head>
+
+
+  <body>
+    
+    <div class="container main">
+      <div class="row navbar">
+  
+  <div class="col-6">
+    
+    <a
+      class="fa fa-github"
+      href="https://github.com/krummja"
+      title="GitHub"
+    ></a>
+    
+  </div>
+  
+  <div class="col-6 text-right">
+    <a class="fa fa-home" href="/"></a>
+  </div>
+  
+</div>
+
+      <div class="row justify-content-center">
+  
+  <header class="col-md-12 text-center mt-3">
+    <span itemprop="name" class="p1-3 pr-3"><h1>Programmatically Representing Newtonian Gravitation</h1></span>
+    <p>13 May 2020</p>
+    <span class="small-ornament"><svg viewBox="0 0 290 320">
+      <path d="M280.2656 245.3906 Q280.2656 263.25 261.8438 271.9688 Q247.9219 278.7188 227.8125 278.7188 Q235.2656 269.8594 235.2656 256.5 Q235.2656 231.8906 214.4531 217.125 Q196.0312 204.0469 170.2969 204.0469 Q143.5781 204.0469 108.8438 221.0625 L118.9688 231.4688 Q154.4062 267.8906 168.3281 267.8906 Q181.125 267.8906 181.125 255.9375 Q181.125 248.3438 173.5312 243.5625 Q167.0625 239.3438 159.0469 239.3438 Q154.6875 239.3438 148.6406 241.4531 Q158.625 220.0781 173.9531 220.0781 Q184.5 220.0781 191.8828 228.0938 Q199.2656 236.1094 199.2656 246.6562 Q199.2656 265.5 184.3594 277.875 Q170.2969 289.4062 151.0312 289.4062 Q118.6875 289.4062 81.4219 251.0156 L72.1406 241.4531 Q53.5781 249.4688 39.375 249.4688 Q26.4375 249.4688 17.1562 240.9609 Q7.875 232.4531 7.875 219.5156 Q7.875 203.9062 19.125 193.9219 Q29.9531 184.5 45.8438 184.5 Q70.0312 184.5 98.2969 211.6406 Q111.5156 202.2188 127.5469 185.4844 L134.5781 178.1719 Q174.5156 136.6875 204.8906 136.6875 Q231.4688 136.6875 231.4688 155.25 Q231.4688 173.5312 204.3281 177.3281 Q206.4375 172.8281 206.4375 170.1562 Q206.4375 159.3281 193.3594 159.3281 Q175.2188 159.3281 144.2812 189 L137.1094 195.8906 Q165.2344 185.7656 191.25 185.7656 Q221.7656 185.7656 248.3438 200.1094 Q280.2656 217.2656 280.2656 245.3906 ZM61.1719 230.4844 Q44.5781 215.2969 37.2656 215.2969 Q27.9844 215.2969 27.9844 223.4531 Q27.9844 234.4219 42.75 234.4219 Q51.1875 234.4219 61.1719 230.4844z"/>
+    </svg></span>
+  </header>
+  
+</div>
+
+<div class="row justify-content-center">
+  
+  <div class="col-md-8">
+    
+    
+
+    <article lang="en">
+      <p>Much of what follows stems from the Orbital Dynamics simulator created by mathematician and computer scientist Paul Lutus.$^{1}$ Additions and other notes are from various sources.</p>
+
+<h2 id="orbital-math-a-primer">Orbital Math: A Primer</h2>
+
+<h3 id="keplers-laws">Kepler’s Laws</h3>
+
+<p>Johannes Kepler made what is perhaps one of the most important contributions to the development of astronomy. Between 1609 and 1619, Kepler developed <strong>three laws of planetary motion</strong> that built upon the heliocentric model of Nicolaus Copernicus. The contemporary understanding took orbits to be circular, with parent masses described as the <em>center</em> of a given body’s orbit.</p>
+
+<p>One of the more puzzling issues of the Copernican theory was the observation that the apparent velocity of the planets did not remain constant, but varied over time. Being that the orbits of most of the inner planets have an <strong>eccentricity</strong>$^{2}$ at or very close to 0, Kepler’s model essentially predicts the Copernical model; however, with a non-zero eccentricity, the Copernical model is unable to accurately predict motion.</p>
+
+<p>Kepler’s Laws state:</p>
+
+<ol>
+  <li>The orbit of a planet is an ellipse with the Sun as one of the two foci.</li>
+  <li>A line segment joining a planet and the Sun sweeps out equal areas during equal intervals of time.</li>
+  <li>The square of the orbital period of a planet is directly proportional to the cube of the semi-major axis of its orbit.</li>
+</ol>
+
+<p>This is graphically represented in the figure below.</p>
+
+<hr />
+
+<p><img src="/assets/images/1280px-Kepler_laws_diagram.svg.png" alt="" width="100%" /></p>
+
+<p><em>Figure 1:</em> Kepler’s Laws with two orbiting bodies about a parent mass (the sun).</p>
+
+<hr />
+
+<p>The observation of variable velocity is explained in terms of the second law. Although neither linear nor angular speed of the orbiting body is constant, the <strong>areal velocity</strong> of the body is constant.</p>
+
+<hr />
+<h3 id="excursus-on-areal-velocity">Excursus on Areal Velocity</h3>
+
+<p><img src="/assets/images/ArealVelocity_with_curved_area.svg.png" alt="" /></p>
+
+<p>Let point A represent the inflection point around which some orbiting body rotates, with points B and C representing positions of that orbiting body at two different points in time. The vector $\vec{r}(t)$ describes the position vector of the orbiting body at time $t$, while $\vec{r}(t+\Delta t)$ describes the position vector at time $t$ plus the time interval $\Delta t$.</p>
+
+<p>Take point D to be the point described by adding the vectors $\vec{r}(t)$ and $\vec{r}(t+\Delta t)$. The area of the triangle $ABC$ is exactly half the area of the resulting parallelogram $ABCD$. The magnitude of the cross product of $\vec{r}(t)$ and $\vec{r}(t+\Delta t)$ is equal to the area of $ABCD$. In other words, $ABCD = \vec{r}(t) \times \vec{r}(t+\Delta t)$.</p>
+
+<p>The vector area of triangle $ABC$ is therefore given by:</p>
+
+<script type="math/tex; mode=display">ABC = \frac{\vec{r}(t) \times \vec{r}(t+\Delta t)}{2}</script>
+
+<p>Finally, the areal velocity is computed from the vector triangle divided by $\Delta t$ as $\Delta t$ approaches the limit. Accordingly:</p>
+
+<script type="math/tex; mode=display">areal~velocity = \lim_{\Delta t \rightarrow 0} \frac{\vec{r}(t) \times \vec{r}'(t)\Delta t}{2 \Delta t}</script>
+
+<script type="math/tex; mode=display">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ = \lim_{\Delta t \rightarrow 0} \frac{\vec{r}(t) \times (\vec{r}'(t) + \vec{r}'\Delta t)}{2 \Delta t}</script>
+
+<script type="math/tex; mode=display">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ = \lim_{\Delta t \rightarrow 0} \frac{\vec{r}(t) \times \vec{r}'(t)}{2 \Delta t} \left(\frac{\Delta t}{\Delta t}\right)</script>
+
+<script type="math/tex; mode=display">~~~~~~~~~~~~ = \frac{\vec{r}(t) \times \vec{r}'(t)}{2}</script>
+
+<p>The vector $\vec{r}’(t)$ is the velocity vector $\vec{v}(t)$ of the moving body. Therefore:</p>
+
+<script type="math/tex; mode=display">\frac{d\vec{A}}{dt} = \frac{\vec{r} \times \vec{v}}{2}</script>
+
+<p>Which states that the derivative of $\vec{A}$ with respect to time is equivalent to half the cross product of the moving body’s position vector $\vec{r}$ and velocity vector $\vec{v}$.</p>
+
+<hr />
+
+<h2 id="simulating-orbits">Simulating Orbits</h2>
+
+<p>Simulating orbital motion is not as difficult as it may seem. The primary challenge of developing such a simulation is the same challenge faced by physicists and cosmologists working with orbital calculations. For any system of three or more bodies, there is no closed-form solution that describes the positions and velocities of those bodies (the <em>n</em>-body problem). Instead, we must constantly (re)calculate the relevant values at each point in time that the simulation runs.</p>
+
+<p>To get us off the ground (heh), we have to set some initial conditions and then model the changes to the system at each susbequent time step. <em>At</em> each given time step, we can use the <strong>state vectors</strong> of the system to describe the state of the system at that point. For this, we will neeed:</p>
+
+<ul>
+  <li>
+    <p>A radius between the gravitating bodies.</p>
+
+    <script type="math/tex; mode=display">r = \sqrt{x^{2} + y^{2} + z^{2}}</script>
+  </li>
+  <li>
+    <p>A gravitational force scalar.</p>
+
+    <script type="math/tex; mode=display">f = -\frac{GM_{1}M_{2}}{r^{2}}</script>
+  </li>
+  <li>
+    <p>A normalized direction vector (unit vector) to give the gravitational force scalar direction.</p>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">\hat{r}\{x, y, z\} = \frac{\{x, y, z\}}{\sqrt{x^{2} + y^{2} + z{^2}}}</script>
+
+<ul>
+  <li>The velocity vector is constantly updated by gravitational acceleration and multiplied by the unit vector.</li>
+</ul>
+
+<script type="math/tex; mode=display">\vec{v}_{t+1} = \vec{v}_{t} + \hat{r}f\Delta t</script>
+
+<ul>
+  <li>The position vector is updated by velocity.</li>
+</ul>
+
+<script type="math/tex; mode=display">\vec{p}_{t+1} = \vec{p}_{t} + \vec{v}_{t+1}\Delta t</script>
+
+<ul>
+  <li>The updated position is plotted on an output, and then the process repeats.</li>
+</ul>
+
+<hr />
+
+<p>[1] <a href="https://arachnoid.com/orbital_dynamics/index.html">Orbital Dynamics: A comprehensive JavaScript/Canvas orbital physics model</a></p>
+
+<p>[2] <strong>Eccentricity</strong> is the measure of the degree to which a conic section deviates from a perfect circle. Eccentricity as relevant to orbital dynamics is represented as a value between 0 and 1, where 0 describes a circle, 1 describes a parabola. Any value between 0 and 1 (exclusive) describes an ellipse.</p>
+
+
+    </article>
+
+    
+  </div>
+  
+</div>
+
+    </div>
+    
+    <footer class="mb-3">
+  
+  <div class="container">
+    
+    <div class="row biography">
+      <div class="col-sm-6">
+        <h2>who am i</h2>
+        <p>I am a PhD student at the University of Georgia working in the area of theoretical linguistics.
+My current research interests have led me to the study of incorporation phenomena; this project is part of a larger set of projects that aim to investigate the relationship between syntax and semantics, particularly as applied to the interpretation of predicates.</p>
+        <p></p>
+      </div>
+      
+      <div class="col-sm-6">
+        <h2>what is this</h2>
+        <p>A digital garden - a blog and personal notebook. I post intermittently about a wide variety of things, related to linguistics, writing, programming, and other side interests. I also use this site to host content for the writing courses I support at UGA.</p>
+      </div>  
+    </div>
+    
+    
+    <div class="row copyright text-center">
+      <div class="col-sm-12">© 2019-2020 by Jonathan Crum.</div>
+    </div>
+    
+
+  </div>
+  
+</footer>
+
+    
+  </body>
+
+  
+
+</html>

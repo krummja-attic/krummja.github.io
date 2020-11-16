@@ -9,7 +9,7 @@
 
   <title>
     
-    Acquaviva (2019)
+    A Clever Use of Maps in TypeScript
     
   </title>
 
@@ -19,8 +19,8 @@
   
   
   
-    Acquaviva (2019)
-    13 May 2020
+    A Clever Use of Maps in TypeScript
+    15 Jul 2020
     
       
     
@@ -35,7 +35,7 @@
     
 
     
-      In his chapter ‘Categorization as Noun Cons..." />
+      It’s been a goodly while ..." />
 
   
   <meta name="keywords" content="
@@ -44,7 +44,7 @@
   
   " />
 
-  <link rel="canonical" href="http://simulacrum.space/blog/2020/05/13/acquaviva2019/">
+  <link rel="canonical" href="http://simulacrum.space/drafts/2020-07-15-typescript-maps/">
   <link rel="alternate" type="application/rss+xml" title="Simulacrum" href="http://simulacrum.space/feed.xml" />
   <span itemprop='author'><meta name="author" content="Jonathan Crum"><span itemprop='author'></span>
 
@@ -133,8 +133,8 @@
       <div class="row justify-content-center">
   
   <header class="col-md-12 text-center mt-3">
-    <span itemprop="name" class="p1-3 pr-3"><h1>Acquaviva (2019)</h1></span>
-    <p>13 May 2020</p>
+    <span itemprop="name" class="p1-3 pr-3"><h1>A Clever Use of Maps in TypeScript</h1></span>
+    <p>15 Jul 2020</p>
     <span class="small-ornament"><svg viewBox="0 0 290 320">
       <path d="M280.2656 245.3906 Q280.2656 263.25 261.8438 271.9688 Q247.9219 278.7188 227.8125 278.7188 Q235.2656 269.8594 235.2656 256.5 Q235.2656 231.8906 214.4531 217.125 Q196.0312 204.0469 170.2969 204.0469 Q143.5781 204.0469 108.8438 221.0625 L118.9688 231.4688 Q154.4062 267.8906 168.3281 267.8906 Q181.125 267.8906 181.125 255.9375 Q181.125 248.3438 173.5312 243.5625 Q167.0625 239.3438 159.0469 239.3438 Q154.6875 239.3438 148.6406 241.4531 Q158.625 220.0781 173.9531 220.0781 Q184.5 220.0781 191.8828 228.0938 Q199.2656 236.1094 199.2656 246.6562 Q199.2656 265.5 184.3594 277.875 Q170.2969 289.4062 151.0312 289.4062 Q118.6875 289.4062 81.4219 251.0156 L72.1406 241.4531 Q53.5781 249.4688 39.375 249.4688 Q26.4375 249.4688 17.1562 240.9609 Q7.875 232.4531 7.875 219.5156 Q7.875 203.9062 19.125 193.9219 Q29.9531 184.5 45.8438 184.5 Q70.0312 184.5 98.2969 211.6406 Q111.5156 202.2188 127.5469 185.4844 L134.5781 178.1719 Q174.5156 136.6875 204.8906 136.6875 Q231.4688 136.6875 231.4688 155.25 Q231.4688 173.5312 204.3281 177.3281 Q206.4375 172.8281 206.4375 170.1562 Q206.4375 159.3281 193.3594 159.3281 Q175.2188 159.3281 144.2812 189 L137.1094 195.8906 Q165.2344 185.7656 191.25 185.7656 Q221.7656 185.7656 248.3438 200.1094 Q280.2656 217.2656 280.2656 245.3906 ZM61.1719 230.4844 Q44.5781 215.2969 37.2656 215.2969 Q27.9844 215.2969 27.9844 223.4531 Q27.9844 234.4219 42.75 234.4219 Q51.1875 234.4219 61.1719 230.4844z"/>
     </svg></span>
@@ -149,16 +149,31 @@
     
 
     <article lang="en">
-      <p>In his chapter ‘Categorization as Noun Construction: Gender, Number, and Entity Types’ in the (2019) book “Gender and Noun Classification”, Paolo Acquaviva suggests that nouns, built incrementally from sub-lexical syntactic atoms, denote neither objects nor kinds. Instead, he suggests they serve as names of entity types, which in turn restrict the kind- or object-level denotation of the DP they embed under.</p>
+      <p>It’s been a goodly while since I’ve had occasion to draft a post for this blog. To be perfectly blunt, the pandemic has made it very, very difficult to do much of anything useful these days, given that I live in Georgia where the situation in rapidly deteriorating. Even in the best of times, my neurodivergence makes it difficult to focus on work, and so you might say I am easily given over to despair. When I’m unable to work on things that I love, that effect compounds and rapidly sends me spiralling.</p>
+
+<p>Well, here lately I’ve been working quite a bit on a hobby project, what you might call my second passion in life following linguistics research. I’m a novice programmer, and as a way to keep myself active and mentally stimulated while in quarantine, I have been working on building a RogueLike game using TypeScript. While working on this, I have experienced a slow slide into what I can only describe as authorial doldrums. In less flowerly language: everyone being sick means I can’t write for shit.</p>
+
+<p>Needless to say, I’m a bit rusty. This blog was, in spite of the spareness of its content, intended to be a way for me to practice writing into the void. Of course, with the abovementioned, I have not been motivated to contribute to my own blog, either, largely for lack of focus on what might make a good post. Well, in trying to figure out a bit of a tricky component of my game’s engine, the words of a colleague of mine rushed back to me. To paraphrase, whenever I can’t find information on something, I learn everything I can about it and then write the tutorial I wish I had when I was searching in the first place. With all that said, I have occasion to write just such a tutorial. To get us started, let’s orient ourselves with some basics.</p>
+
+<p>TypeScript, for those who may not know, is a superset of JavaScript which, as the name implies, fixes the fundamental design flaw of JS by providing a system of static types at compile time. TypeScript (henceforth TS) compiles down to JS, which can then be integrated into a webpage. What makes TS ideal for my purposes is that it (a) builds on my already developed knowledge of JS, and (b) it forces me to slow down and consider aspects of program design that I otherwise might blast right past. I would like to share one such aspect in this post.</p>
+
+<p>JS, being a <em>dynamically typed</em> language, infers the types of the symbols and expressions rather than relying on <em>static type</em> definitions. JS comes prepackaged with 6 basic types: <em>Undefined</em>, <em>Null</em>, <em>Boolean</em>, <em>String</em>, <em>Number</em>, and <em>Object</em>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">Number</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>  <span class="c1">// evaluates to 1</span>
+<span class="nb">Number</span><span class="p">(</span><span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// evaluates to 123</span>
+<span class="nb">String</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>  <span class="c1">// evaluates to 'true'</span>
+
+</code></pre></div></div>
+
+<p>The built-in function <code class="highlighter-rouge">Number</code> takes in an input of type <em>Boolean</em>, <em>Number</em>, <em>String</em> or <em>Object</em> and converts it to its best guess as to a numerical value. <em>Boolean</em> values are interpreted as 1 = <code class="highlighter-rouge">true</code> and 0 = <code class="highlighter-rouge">false</code>, as we might expect. A string like <code class="highlighter-rouge">'123'</code> when fed into <code class="highlighter-rouge">Number</code> returns the actual <em>Number</em> <code class="highlighter-rouge">123</code>. Finally, the function <code class="highlighter-rouge">String</code>, like its numerically inclined counterpart, returns the string literal interpretation of what’s fed into it.</p>
+
+<hr />
+
 
 
     </article>
 
-    
-    <div class="mb-4">
-      <h3>Reference</h3>
-      Acquaviva, Paolo (2019). Categorization as Noun Construction: Gender, Number and Entity Types. Gender and Noun Classification. 
-    </div>
     
   </div>
   
