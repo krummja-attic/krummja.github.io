@@ -343,3 +343,10 @@ table {
     padding-bottom: .6em;
   }
 }
+
+.index-col {
+    background-color: rgba(238, 229, 217, 0.5);
+    margin: 0 10px 0 10px;
+    // box-shadow: 0 0 5px 5px rgba(160, 160, 160, 0.25);
+    border-radius: 10px;
+}

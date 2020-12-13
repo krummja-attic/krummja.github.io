@@ -5,4 +5,5 @@ date: {{ date }}
 author:
 keywords: ""
 description: ""
+tags: ""
 ---

@@ -252,6 +252,11 @@ table {
     letter-spacing: .1em;
     padding-bottom: .6em; }
 
+.index-col {
+  background-color: rgba(238, 229, 217, 0.5);
+  margin: 0 10px 0 10px;
+  border-radius: 10px; }
+
 /**
  * Syntax highlighting styles
  */
