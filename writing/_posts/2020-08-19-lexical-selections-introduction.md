@@ -2,9 +2,6 @@
 layout: post
 title: Introduction
 date: 2020-08-19
-external-url:
-categories: [Lexical Selections]
-publication: false
 ---
 
 Hello there, and welcome!

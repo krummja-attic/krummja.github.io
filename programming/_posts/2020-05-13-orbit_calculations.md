@@ -2,9 +2,6 @@
 layout: post
 title: Programmatically Representing Newtonian Gravitation
 date: 2020-05-13
-external-url:
-categories: Programming
-publication: false
 ---
 
 Much of what follows stems from the Orbital Dynamics simulator created by mathematician and computer scientist Paul Lutus.$^{1}$ Additions and other notes are from various sources.

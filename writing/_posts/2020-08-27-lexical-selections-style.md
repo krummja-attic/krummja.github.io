@@ -2,9 +2,6 @@
 layout: post
 title: Writing for Linguistics
 date: 2020-08-27
-external-url:
-categories: [Lexical Selections]
-publication: false
 ---
 
 Hello again, and welcome to the second post in the *Lexical Selections* series. Today we will delve into some practical matters concerning the basics of the presentational style used in the linguistic sciences. The goal here is to help you start putting together a palette of fundamentals that, when applied to specific situations in presenting your discussion, will provide important texture to your argument. For now, we'll start with some of the more rote guidelines for linguistics writing, but in future posts we can start to get into some of the more interesting issues like the distinction between merely describing and providing satisfactory explanation. But those are issues that ultimately tie into methodological and theoretical concerns we have yet to appreciate fully, so let's not jump the gun and get into the more basic - but no less important - aspects of style.

@@ -2,9 +2,6 @@
 layout: post
 title: Writing for Linguistics II
 date: 2020-09-04
-external-url:
-categories: [Lexical Selections]
-publication: false
 ---
 
 In this post, I want to zoom in a little bit on the technicalia of paragraph construction. The goal of this week's discussion is to begin to work out a framework that we can use to make specific decisions about the way we organize our paragraphs. Let's start out from a very broad level, divorced from the specifics of writing for linguistics. We'll focus on the basics of paragraph construction, and how it relates to the effective presentation of the content of our writing.
