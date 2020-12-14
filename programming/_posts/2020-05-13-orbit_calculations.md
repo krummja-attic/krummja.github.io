@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programmatically Representing Newtonian Gravitation
+title: Notes on Newtonian Gravity
 date: 2020-05-13
 ---
 

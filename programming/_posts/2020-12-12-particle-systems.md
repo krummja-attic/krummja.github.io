@@ -4,6 +4,8 @@ title: Particle Systems in Python
 date: 2020-12-12
 ---
 
+## DRAFT
+
 In this article, I will be exploring the design of particle systems in preparation for the implementation of one in my roguelike game, Simulacra.
 
 ## Design
