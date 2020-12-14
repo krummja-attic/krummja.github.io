@@ -17,6 +17,10 @@ layout: default
 <div class="row justify-content-center">
   
   <div class="col-md-8">
+
+    {% if page.draft %}
+    <div class="mb-4" style="color: red;">DRAFT</div>
+    {% endif %}
     
     {% if page.abstract %}
     <div class="mb-4">{{ page.abstract }}</div>
