@@ -48,6 +48,10 @@ GEM
     rouge (3.26.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
 
 PLATFORMS
   ruby
@@ -56,6 +60,7 @@ DEPENDENCIES
   jekyll (~> 3.9.0)
   jekyll-diagrams
   kramdown (~> 1.17.0)
+  sass-listen (~> 4.0.0)
 
 BUNDLED WITH
-   2.1.4
+   2.2.4

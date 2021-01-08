@@ -190,13 +190,13 @@
 <span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"T"</span><span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">EventDispatch</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">EventDispatch</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
 
     <span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
             <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="nf">ev_keydown</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">event</span><span class="p">:</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">KeyDown</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="k">def</span> <span class="nf">ev_keydown</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">event</span><span class="p">:</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">KeyDown</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
         <span class="k">pass</span>
 </code></pre></div></div>
 
@@ -209,7 +209,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s">"T"</span><span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">EventDispatch</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">EventDispatch</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
     <span class="c1"># ...
 </span></code></pre></div></div>
 
@@ -219,7 +219,7 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">wait</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">wait</span><span class="p">():</span>
                 <span class="c1"># ...
 </span></code></pre></div></div>
 
@@ -234,7 +234,7 @@
 <p>We can throw this into our loop as a <code class="language-plaintext highlighter-rouge">try ... except</code> statement to neatly handle our two possibilities.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                <span class="k">try</span><span class="p">:</span>
-                    <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
                 <span class="k">except</span> <span class="n">StateBreak</span><span class="p">:</span>
                     <span class="k">return</span> <span class="bp">None</span>
 </code></pre></div></div>
@@ -243,9 +243,9 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">wait</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">wait</span><span class="p">():</span>
                 <span class="k">try</span><span class="p">:</span>
-                    <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
                 <span class="k">except</span> <span class="n">StateBreak</span><span class="p">:</span>
                     <span class="k">return</span> <span class="bp">None</span>
                 <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
@@ -254,7 +254,7 @@
 
 <p>We’ll return <code class="language-plaintext highlighter-rouge">value</code>. But what exactly is <code class="language-plaintext highlighter-rouge">value</code>? It can be anything we want, really - but the easiest thing to make it is something that we can use to link our keyboard events to functions that will in turn send out things of type <code class="language-plaintext highlighter-rouge">T</code>. By itself, this isn’t going to do a whole lot, of course. We can go ahead and provide an implementation for the <code class="language-plaintext highlighter-rouge">EventDispatch</code> class’s <code class="language-plaintext highlighter-rouge">ev_keydown</code> method, which will allow us to subscribe to any incoming key press events.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">ev_keydown</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">event</span><span class="p">:</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">KeyDown</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">ev_keydown</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">event</span><span class="p">:</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">KeyDown</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
         <span class="k">pass</span>
 </code></pre></div></div>
 
@@ -268,19 +268,19 @@
 
 <p>And this is how the structure of <code class="language-plaintext highlighter-rouge">State</code> will end up looking:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">EventDispatch</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">EventDispatch</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
 
     <span class="n">COMMANDS</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">K_RETURN</span><span class="p">:</span> <span class="s">"confirm"</span><span class="p">,</span>
-        <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">K_ESCAPE</span><span class="p">:</span> <span class="s">"escape"</span><span class="p">,</span>
+        <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">K_RETURN</span><span class="p">:</span> <span class="s">"confirm"</span><span class="p">,</span>
+        <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">K_ESCAPE</span><span class="p">:</span> <span class="s">"escape"</span><span class="p">,</span>
     <span class="p">}</span>
 
     <span class="c1"># ...
 </span>
-    <span class="k">def</span> <span class="nf">ev_keydown</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">event</span><span class="p">:</span> <span class="n">tcod</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">KeyDown</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="k">def</span> <span class="nf">ev_keydown</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">event</span><span class="p">:</span> <span class="n">tcod</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">KeyDown</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
         <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Optional</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span>
-        <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">sym</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">COMMANDS</span><span class="p">:</span>
-            <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="s">"cmd_{self.COMMAND[event.sym]}"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">event</span><span class="p">.</span><span class="n">sym</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">COMMANDS</span><span class="p">:</span>
+            <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s">"cmd_</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">COMMAND</span><span class="p">[</span><span class="n">event</span><span class="p">.</span><span class="n">sym</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">func</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">None</span>
 

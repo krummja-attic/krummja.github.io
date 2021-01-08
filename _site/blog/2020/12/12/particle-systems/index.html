@@ -187,135 +187,13 @@
 <h3 id="in-the-abstract">In the Abstract</h3>
 
 <div class="jekyll-diagrams diagrams nomnoml">
-  <svg version="1.1" baseProfile="full" width="854" height="203.5" viewbox="0 0 854 203.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" style="font:bold normal 12pt Helvetica, Helvetica, sans-serif;;stroke-linejoin:round;stroke-linecap:round">
-  <desc>
-#direction: right
-
-[Effect] &lt;:- [ParticleEffect]
-[Particle] &lt;-- [ParticleEmitter]
-
-[ParticleEmitter] &lt;-- [ParticleEffect]
-
-[StarFirework] -:&gt; [ParticleEffect]
-[StarFirework] --&gt; [StarExplosion]
-[StarExplosion] -:&gt; [ParticleEmitter]
-
-[Screen] --&gt; [Scene]
-[Scene] --&gt; [StarFirework]
-
-</desc>
-  <rect x="0" y="0" height="203.5" width="854" style="stroke:none; fill:transparent;"></rect>
-  <path d="M647 29 L701.5 29 L764 84.5 L764 84.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M660.3 23.7 L660.3 29 L660.3 34.3 L647 29 Z" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M486.5 64.5 L531.5 64.5 L579.4 84.5 L579.4 84.5 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
-  <path d="M499.8 59.2 L493.2 64.5 L499.8 69.8 L486.5 64.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M681.5 100 L701.5 100 L721.5 100 L721.5 100 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
-  <path d="M694.8 94.7 L688.2 100 L694.8 105.3 L681.5 100 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M332.3 178.8 L366.5 191 L449 191 L449 191 L531.5 191 L531.5 191 L616.5 191 L616.5 191 L701.5 191 L701.5 191 L767.9 115.5 L767.9 115.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M763.1 129 L759.1 125.5 L755.1 122 L767.9 115.5 Z" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M332.3 147.8 L366.5 135.5 L386.5 135.5 L386.5 135.5 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
-  <path d="M373.2 140.8 L379.8 135.5 L373.2 130.2 L386.5 135.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M511.5 135.5 L531.5 135.5 L579.4 115.5 L579.4 115.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M569.1 125.6 L567.1 120.6 L565 115.7 L579.4 115.5 Z" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M85.5 163.3 L105.5 163.3 L125.5 163.3 L125.5 163.3 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
-  <path d="M112.2 168.6 L118.8 163.3 L112.2 157.9 L125.5 163.3 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M191.5 163.3 L211.5 163.3 L231.5 163.3 L231.5 163.3 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
-  <path d="M218.2 168.6 L224.8 163.3 L218.2 157.9 L231.5 163.3 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <rect x="586.5" y="13.5" height="31" width="61" data-name="Effect" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="617" y="35" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Effect">Effect</text>
-  <rect x="721.5" y="84.5" height="31" width="120" data-name="ParticleEffect" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="781.5" y="106" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="ParticleEffect">ParticleEffect</text>
-  <rect x="411.5" y="49.5" height="31" width="75" data-name="Particle" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="449" y="71" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Particle">Particle</text>
-  <rect x="551.5" y="84.5" height="31" width="130" data-name="ParticleEmitter" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="616.5" y="106" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="ParticleEmitter">ParticleEmitter</text>
-  <rect x="231.5" y="147.5" height="31" width="115" data-name="StarFirework" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="289" y="169" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="StarFirework">StarFirework</text>
-  <rect x="386.5" y="120.5" height="31" width="125" data-name="StarExplosion" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="449" y="142" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="StarExplosion">StarExplosion</text>
-  <rect x="13.5" y="147.5" height="31" width="72" data-name="Screen" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="49.5" y="169" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Screen">Screen</text>
-  <rect x="125.5" y="147.5" height="31" width="66" data-name="Scene" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="158.5" y="169" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Scene">Scene</text>
-</svg>
+  Command Not Found: nomnoml
 </div>
 
 <h3 id="model">Model</h3>
 
 <div class="jekyll-diagrams diagrams nomnoml">
-  <svg version="1.1" baseProfile="full" width="563" height="402" viewbox="0 0 563 402" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" style="font:normal normal 12pt Helvetica, Helvetica, sans-serif;;stroke-linejoin:round;stroke-linecap:round">
-  <desc>
-
-[Effect
-|	- screen
-	- start_frame
-	- stop_frame
-	- delete_count
-	- scene
-|   + update(frame_no)
-	+ register_scene(scene)
-	- _update(frame_no)
-]
-
-[Screen
-| - _scenes
-  - _scene_index
-  - _frame
-| + play(scenes, start_scene, repeat)
-  + set_scenes(scenes, start_scene)
-  + draw_next_frame(repeat)
-]
-
-[Scene 
-|	- _effects
-|   + add_effect(effect)
-	+ remove_effect(effect)
-]
-
-
-[Effect] 1.. &lt;-&gt; 1 [Screen]
-[Effect] -&gt; 1[Scene]
-
-</desc>
-  <rect x="0" y="0" height="402" width="563" style="stroke:none; fill:transparent;"></rect>
-  <text x="209.8" y="205.8" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;">1..</text>
-  <text x="144" y="228.5" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;">1</text>
-  <path d="M201.8 185.8 L162 216.5 L162 236.5 L162 236.5 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M156.7 223.2 L162 229.8 L167.3 223.2 L162 236.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M194.5 198.1 L196.5 189.9 L187.9 189.7 L201.8 185.8 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <text x="458.5" y="251" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;">1</text>
-  <path d="M410.8 185.8 L450.5 216.5 L450.5 259 L450.5 259 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M445.2 245.7 L450.5 252.3 L455.8 245.7 L450.5 259 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
-  <rect x="201.5" y="13.5" height="183" width="209" data-name="Effect" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="306" y="35" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Effect">Effect</text>
-  <text x="209.5" y="66" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">- screen</text>
-  <text x="209.5" y="81" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">- start_frame</text>
-  <text x="209.5" y="96" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">- stop_frame</text>
-  <text x="209.5" y="111" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">- delete_count</text>
-  <text x="209.5" y="126" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">- scene</text>
-  <text x="209.5" y="157" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">+ update(frame_no)</text>
-  <text x="209.5" y="172" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">+ register_scene(scene)</text>
-  <text x="209.5" y="187" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Effect">- _update(frame_no)</text>
-  <path d="M201.5 44.5 L410.5 44.5" data-name="Effect" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M201.5 135.5 L410.5 135.5" data-name="Effect" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <rect x="13.5" y="236.5" height="153" width="297" data-name="Screen" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="162" y="258" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Screen">Screen</text>
-  <text x="21.5" y="289" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Screen">- _scenes</text>
-  <text x="21.5" y="304" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Screen">- _scene_index</text>
-  <text x="21.5" y="319" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Screen">- _frame</text>
-  <text x="21.5" y="350" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Screen">+ play(scenes, start_scene, repeat)</text>
-  <text x="21.5" y="365" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Screen">+ set_scenes(scenes, start_scene)</text>
-  <text x="21.5" y="380" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Screen">+ draw_next_frame(repeat)</text>
-  <path d="M13.5 267.5 L310.5 267.5" data-name="Screen" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M13.5 328.5 L310.5 328.5" data-name="Screen" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <rect x="350.5" y="259.5" height="108" width="200" data-name="Scene" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
-  <text x="450.5" y="281" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Scene">Scene</text>
-  <text x="358.5" y="312" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Scene">- _effects</text>
-  <text x="358.5" y="343" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Scene">+ add_effect(effect)</text>
-  <text x="358.5" y="358" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Scene">+ remove_effect(effect)</text>
-  <path d="M350.5 290.5 L550.5 290.5" data-name="Scene" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-  <path d="M350.5 321.5 L550.5 321.5" data-name="Scene" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
-</svg>
+  Command Not Found: nomnoml
 </div>
 
 <h2 id="reverse-engineering-asciimatics">Reverse Engineering ASCIIMatics</h2>
@@ -328,39 +206,39 @@
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># ...
-</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_scenes</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_scene_index</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_frame</span> <span class="o">=</span> <span class="mi">0</span>
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">_scenes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_scene_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_frame</span> <span class="o">=</span> <span class="mi">0</span>
 	
     <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scenes</span><span class="p">,</span> <span class="n">start_scene</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_scenes</span><span class="p">(</span><span class="n">scenes</span><span class="p">,</span> <span class="n">start_scene</span><span class="o">=</span><span class="n">start_scene</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">set_scenes</span><span class="p">(</span><span class="n">scenes</span><span class="p">,</span> <span class="n">start_scene</span><span class="o">=</span><span class="n">start_scene</span><span class="p">)</span>
         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">draw_next_frame</span><span class="p">(</span><span class="n">repeat</span><span class="o">=</span><span class="n">repeat</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">draw_next_frame</span><span class="p">(</span><span class="n">repeat</span><span class="o">=</span><span class="n">repeat</span><span class="p">)</span>
 		
     <span class="k">def</span> <span class="nf">set_scenes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scenes</span><span class="p">,</span> <span class="n">start_scene</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_scenes</span> <span class="o">=</span> <span class="n">scenes</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_scene_index</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_scene</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">scene</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">start_scene</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_scene_index</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_scenes</span> <span class="o">=</span> <span class="n">scenes</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_scene_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">_start_scene</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">scene</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">start_scene</span><span class="p">.</span><span class="n">name</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">_scene_index</span> <span class="o">=</span> <span class="n">i</span>
                 <span class="k">break</span>
 		
-        <span class="bp">self</span><span class="o">.</span><span class="n">_scenes</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_scene_index</span><span class="p">]</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_scenes</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">_scene_index</span><span class="p">].</span><span class="n">reset</span><span class="p">(</span>
             <span class="n">old_scene</span><span class="o">=</span><span class="n">start_scene</span><span class="p">,</span> <span class="n">screen</span><span class="o">=</span><span class="bp">self</span>
             <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_frame</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_idle_frame_count</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_frame</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_idle_frame_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
 		
     <span class="k">def</span> <span class="nf">draw_next_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
-        <span class="n">scene</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scenes</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_scene_index</span><span class="p">]</span>
+        <span class="n">scene</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_scenes</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">_scene_index</span><span class="p">]</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_frame</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_idle_frame_count</span> <span class="o">-=</span> <span class="mi">1</span>
-            <span class="k">for</span> <span class="n">effect</span> <span class="ow">in</span> <span class="n">scene</span><span class="o">.</span><span class="n">effects</span><span class="p">:</span>
-                <span class="n">effect</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_frame</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
-        <span class="k">except</span><span class="p">:</span> <span class="o">...</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">_frame</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">_idle_frame_count</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">for</span> <span class="n">effect</span> <span class="ow">in</span> <span class="n">scene</span><span class="p">.</span><span class="n">effects</span><span class="p">:</span>
+                <span class="n">effect</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">_frame</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">refresh</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span> <span class="p">...</span>
 
 </code></pre></div></div>
 
@@ -377,18 +255,18 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Scene</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">effects</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">clear</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_effects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_effects</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">effect</span> <span class="ow">in</span> <span class="n">effects</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_effect</span><span class="p">(</span><span class="n">effect</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">add_effect</span><span class="p">(</span><span class="n">effect</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">add_effect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">effect</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">reset</span><span class="p">:</span>
-            <span class="n">effect</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-        <span class="n">effect</span><span class="o">.</span><span class="n">register_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_effects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">effect</span><span class="p">)</span>
+            <span class="n">effect</span><span class="p">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="n">effect</span><span class="p">.</span><span class="n">register_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_effects</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">effect</span><span class="p">)</span>
 	
     <span class="k">def</span> <span class="nf">remove_effect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">effect</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_effects</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">effect</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_effects</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">effect</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="the-effect-class">The Effect Class</h3>
@@ -398,19 +276,19 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Effect</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">start_frame</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop_frame</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delete_count</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_screen</span> <span class="o">=</span> <span class="n">screen</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_start_frame</span> <span class="o">=</span> <span class="n">start_frame</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_end_frame</span> <span class="o">=</span> <span class="n">end_frame</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_delete_count</span> <span class="o">=</span> <span class="n">delete_count</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_scene</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_screen</span> <span class="o">=</span> <span class="n">screen</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_start_frame</span> <span class="o">=</span> <span class="n">start_frame</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_end_frame</span> <span class="o">=</span> <span class="n">end_frame</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_delete_count</span> <span class="o">=</span> <span class="n">delete_count</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_scene</span> <span class="o">=</span> <span class="bp">None</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_no</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">frame_no</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_frame</span> <span class="ow">and</span> 
-                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_stop_frame</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">frame_no</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stop_frame</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">(</span><span class="n">frame_no</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">frame_no</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_start_frame</span> <span class="ow">and</span> 
+                <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">_stop_frame</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">frame_no</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">_stop_frame</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">frame_no</span><span class="p">)</span>
 	
     <span class="k">def</span> <span class="nf">register_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scene</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_scene</span> <span class="o">=</span> <span class="n">scene</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_scene</span> <span class="o">=</span> <span class="n">scene</span>
 	
     <span class="o">@</span><span class="n">abstractmethod</span>
     <span class="k">def</span> <span class="nf">_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_no</span><span class="p">)</span>
