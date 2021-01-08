@@ -13,4 +13,4 @@ group :jekyll_plugins do
   gem 'jekyll-diagrams'
 end
 
-gem "kramdown", "~> 1.17.0"
+gem "kramdown", "~> 2.3.0"
