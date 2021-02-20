@@ -31,3 +31,30 @@ for (let i = 0; i <= N; i++) {
        .attr('height', scale-1)
        .attr('fill', "hsl(0,40%,70%)");
 }
+
+function makeDraggableCircle (point)
+{
+    let circle = svg.append('circle')
+        .attr('class', "draggable")
+        .attr('r', scale*0.75)
+        .attr('fill', "hsl(0,50%,50%)")
+        .call(d3.drag().on('drag', onDrag));
+
+    function updatePosition ()
+    {
+        circle.attr('transform',
+                    `translate(${(point.x+0.5) * scale}, ${(point.y+0.5 * scale)})`);
+    }
+
+    function onDrag ()
+    {
+        point.x = Math.floor(d3.event.x / scale);
+        point.y = Math.floor(d3.event.y / scale);
+        updatePosition();
+    }
+
+    updatePosition();
+}
+
+makeDraggableCircle(A);
+makeDraggableCircle(B);
