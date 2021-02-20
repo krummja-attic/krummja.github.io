@@ -5,9 +5,11 @@ root.append("svg")
     .attr('width', 25*scale)
     .attr('height', 10*scale);
 
+let svg = d3.select("svg")
+
 for (let x = 0; x < 25; x++) {
     for (let y = 0; y < 10; y++) {
-        root.append('rect')
+        svg.append('rect')
             .attr('transform', `translate(${x*scale}, ${y*scale})`)
             .attr('width', scale)
             .attr('height', scale)
