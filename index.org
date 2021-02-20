@@ -5,6 +5,7 @@
 
 * Todo List
 ** TODO Set up a function (and bind it) to make a new post page.
+
 * Notes
 This is the org index for my personal blog.
 
