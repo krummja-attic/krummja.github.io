@@ -8,26 +8,28 @@ def main():
     os.system("bundle exec jekyll build")
 
     repo_path = os.path.join('/home/krummja/krummja.github.io')
-    root = Repo(repo_path)
+    repo = Repo(repo_path)
 
-    current = root.active_branch
-    master = root.heads.master
-    build = root.heads.build
-    develop = root.heads.develop
+    current = repo.active_branch
+    master = repo.branches['master']
+    build = repo.branches['build']
+    develop = repo.branches['develop']
 
     if current != develop:
         print(f"Not on Develop! Current branch is {current}. Aborting.")
 
     print("Staging branch 'develop' and pushing to remote...")
-    root.git.add('_site')
-    root.git.add('build.py')
-    root.git.commit('-m "autocommit :: $(date)"')
+    repo.git.add('_site')
+    repo.git.add('build.py')
+    repo.git.commit('-m "autocommit :: $(date)"')
 
-    print("Switching to branch 'build'...")
-    root.git.checkout('build')
+    base = repo.merge_base(develop, build)
 
-    print("Merging branch 'develop' >> branch 'build'...")
-    root.git.merge('develop -m "automerge :: $(date)""')
+    repo.index.merge_tree(build, base=base)
+    repo.index.commit("Merging branch 'develop' >> branch 'build'.",
+                      parent_commits=(develop.commit, build.commit))
+
+    build.checkout(force=True)
 
 if __name__ == '__main__':
     main()
