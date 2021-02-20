@@ -75,3 +75,21 @@ function makeDraggableCircle(point)
 makeDraggableCircle(A);
 makeDraggableCircle(B);
 redraw();
+
+
+class Diagram
+{
+
+    constructor(containerId) {
+        this.A = {x: 2, y: 2};
+        this.B = {x: 20, y: 8};
+        this.parent = d3.select(`#${containerId} svg`);
+        this.gGrid = this.parent.append('g');
+        this.gPoints = this.parent.append('g');
+        this.gHandles = this.parent.append('g');
+
+        // this.drawGrid();
+    }
+
+}
+
