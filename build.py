@@ -23,6 +23,8 @@ def main():
 
     print("Switching to branch 'build'...")
     root.git.checkout('build')
+    root.git.merge('develop')
+
 
 
 
