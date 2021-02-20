@@ -20,6 +20,8 @@ for (let x = 0; x < 25; x++) {
 }
 
 let A = {x: 2, y: 2}, B = {x: 20, y: 8};
+let gPoints = svg.append('g');
+
 let N = Math.max(Math.abs(A.x - B.x), Math.abs(A.y - B.y));
 for (let i = 0; i <= N; i++) {
     let t = i / N;
@@ -30,6 +32,31 @@ for (let i = 0; i <= N; i++) {
        .attr('width', scale-1)
        .attr('height', scale-1)
        .attr('fill', "hsl(0,40%,70%)");
+}
+
+function pointsOnLine(P, Q)
+{
+    let points = [];
+    let N = Math.max(Math.abs(P.x-Q.x), Math.abs(P.y-Q.y));
+    for (let i = 0; i <= N; i++) {
+        let t = i / N;
+        let x = Math.round(P.x + (Q.x - P.x) * t);
+        let y = Math.round(P.y + (Q.y - P.y) * t);
+        points.push({x: x, y: y});
+    }
+    return points;
+}
+
+function redraw()
+{
+    let rects = gPoints.selectAll('rect').data(pointsOnLine(A, B));
+    rects.exit().remove();
+    rects.enter().append('rect')
+        .attr('width', scale-1)
+        .attr('height', scale-1)
+        .attr('fill', "hsl(0,40%,70%)")
+        .merge(rects)
+        .attr('transform', (p) => `translate(${p.x*scale}, ${p.y*scale})`);
 }
 
 function makeDraggableCircle(point)
@@ -51,6 +78,7 @@ function makeDraggableCircle(point)
         point.x = Math.floor(d3.event.x / scale);
         point.y = Math.floor(d3.event.y / scale);
         updatePosition();
+        redraw();
     }
 
     updatePosition();
@@ -58,3 +86,4 @@ function makeDraggableCircle(point)
 
 makeDraggableCircle(A);
 makeDraggableCircle(B);
+redraw();
