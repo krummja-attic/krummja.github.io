@@ -1,11 +1,6 @@
 const scale = 22;
 
-let container = document.createElement("div");
-container.attr('display', 'flex');
-
-let root = d3.select("div#js-tests");
-
-container.append(root);
+let root = d3.select("div#js-tests").attr('display', 'flex');
 
 root.append("svg")
     .attr('width', 25*scale)
