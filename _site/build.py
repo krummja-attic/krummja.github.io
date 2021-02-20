@@ -20,6 +20,7 @@ def main():
 
     print("Staging branch 'develop' and pushing to remote...")
     root.git.add('_site')
+    root.git.add('build.py')
     root.git.commit('-m "autocommit :: $(date)"')
 
     print("Switching to branch 'build'...")
