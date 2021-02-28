@@ -1,24 +1,11 @@
-# Papyrus - Jekyll Theme
+# STATIC
 
-Papyrus is a responsive three-column Jekyll theme with classic styling and careful typographic details.
+**This directory is not required, you can delete it if you don't want to use it.**
 
-Loosely based on the [Onelight Atom Theme](https://github.com/atom/one-light-ui).
+This directory contains your static files.
+Each file inside this directory is mapped to `/`.
+Thus you'd want to delete this README.md before deploying to production.
 
-## Install and Test
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
 
-1. Download or clone the repo
-  - `git clone git@github.com:hugoferreira/papyrus-theme.git`
-2. Enter the folder
-  - `cd papyrus-theme/`
-3. Start Jekyll server
-  - `jekyll serve --watch`
-4. Access via
-  - http://127.0.0.1:4000/papyrus-theme/
-
-## Demo
-
-- http://hugosereno.eu
-
-## Preview
-
-![Theme preview](/assets/screenshot.png)
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).

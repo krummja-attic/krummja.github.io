@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/notebook", {data:[{}],fetch:{},mutations:void 0});
