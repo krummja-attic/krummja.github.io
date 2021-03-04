@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tag/programming", (function(a){return {data:[{articles:[],notes:[],tag:{slug:a,name:a,toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002Fprogramming",extension:".md",createdAt:"2021-03-04T02:01:58.993Z",updatedAt:"2021-03-04T02:02:04.313Z"}}],fetch:{},mutations:void 0}}("programming")));

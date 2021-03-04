@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tag/manuscript", (function(a){return {data:[{articles:[],notes:[],tag:{slug:a,name:a,toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002Fmanuscript",extension:".md",createdAt:"2021-03-04T02:01:19.920Z",updatedAt:"2021-03-04T02:03:41.058Z"}}],fetch:{},mutations:void 0}}("manuscript")));
