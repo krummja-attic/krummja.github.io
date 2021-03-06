@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/devlogIndex", (function(a,b,c,d,e,f,g,h){return {data:[{logs:[],tags:[{slug:a,name:a},{slug:b,name:b},{slug:c,name:c},{slug:d,name:d},{slug:e,name:e},{slug:f,name:f},{slug:g,name:g},{slug:h,name:h}]}],fetch:{},mutations:void 0}}("research","manuscript","programming","python","javascript","roguelikes","emacs","writing")));
