@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{320:function(n,e,t){"use strict";t.r(e);var c={render:function(n){return this.createDynamicLayout(n)},methods:{createDynamicLayout:function(n){return n("div",{class:"row"},[n("div",{class:"col"})])}}},o=t(11),component=Object(o.a)(c,undefined,undefined,!1,null,null,null);e.default=component.exports}}]);
