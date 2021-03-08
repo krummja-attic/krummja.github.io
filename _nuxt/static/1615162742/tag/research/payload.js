@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tag/research", (function(a){return {data:[{articles:[],notes:[],tag:{slug:a,name:a,toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002Fresearch",extension:".md",createdAt:"2021-03-02T18:47:09.849Z",updatedAt:"2021-03-03T03:29:27.007Z"}}],fetch:{},mutations:void 0}}("research")));

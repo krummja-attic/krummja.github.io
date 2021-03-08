@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tag/roguelikes", (function(a){return {data:[{articles:[],notes:[],tag:{slug:a,name:a,toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002Froguelikes",extension:".md",createdAt:"2021-03-04T02:02:39.001Z",updatedAt:"2021-03-04T02:02:43.697Z"}}],fetch:{},mutations:void 0}}("roguelikes")));
