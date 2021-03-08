@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tag/python", (function(a){return {data:[{articles:[],notes:[],tag:{slug:a,name:a,toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002Fpython",extension:".md",createdAt:"2021-03-04T02:02:10.461Z",updatedAt:"2021-03-04T02:02:19.593Z"}}],fetch:{},mutations:void 0}}("python")));
