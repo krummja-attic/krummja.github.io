@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/tag/emacs", (function(a){return {data:[{articles:[],notes:[],tag:{slug:a,name:a,toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002Femacs",extension:".md",createdAt:"2021-03-04T02:03:46.185Z",updatedAt:"2021-03-04T02:03:49.013Z"}}],fetch:{},mutations:void 0}}("emacs")));
