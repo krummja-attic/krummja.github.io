@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/notebookIndex", {data:[{notebook:[{slug:"test",title:"Test Note",createdAt:"2021-03-30T17:54:30.204Z"}]}],fetch:{},mutations:[]});
