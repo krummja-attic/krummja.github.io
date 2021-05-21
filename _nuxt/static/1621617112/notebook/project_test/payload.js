@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/notebook/project_test", {data:[{note:{slug:"project_test",description:"Test.",title:"Test Project",createdAt:"2021-05-20T00:00:00.000Z",tags:"Project, Programming, Python",toc:[],body:{type:"root",children:[]},dir:"\u002Fnotebook",path:"\u002Fnotebook\u002Fproject_test",extension:".md",updatedAt:"2021-05-21T02:57:40.145Z"}}],fetch:{},mutations:[]});

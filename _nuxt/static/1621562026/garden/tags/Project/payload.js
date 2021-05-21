@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/garden/tags/Project", (function(a){return {data:[{articles:[],tag:{slug:a,title:a,toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002FProject",extension:".md",createdAt:"2021-05-21T01:53:33.408Z",updatedAt:"2021-05-21T01:53:39.656Z"}}],fetch:{},mutations:[]}}("Project")));
