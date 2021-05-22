@@ -229,10 +229,32 @@ The last step is to add in the interactivity. For this, we'll make a simple even
         handleInput(points) {
             this._context.canvas.onmousemove = (event) => {
                 event.preventDefault();
-                points[0] = [
-                    event.layerX, 
-                    event.layerY - this._canvas.offsetTop
-                ];
+
+                let posX = 0;
+                let posY = 0;
+                
+                if (!event) var event = window.event;
+                if (event.clientX || event.clientY) {
+                    posX = event.clientX 
+                           + document.body.scrollLeft 
+                           + document.documentElement.scrollLeft;
+                    posY = event.clientY 
+                           + document.body.scrollTop 
+                           + document.documentElement.scrollTop;
+                }
+                
+                let el = event.target;
+
+                let x = 0;
+                let y = 0;
+
+                while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+                    x += el.offsetLeft - el.scrollLeft;
+                    y += el.offsetTop - el.scrollTop;
+                    el = el.offsetParent;
+                }
+
+                points[0] = [posX - x, posY - y];
                 this.update(points);
             }
         },
@@ -240,7 +262,7 @@ The last step is to add in the interactivity. For this, we'll make a simple even
     }
 ```
 
-Note that when we grab the event coordinates, we have to offset the `event.layerY` value by accessing the canvas' `offsetTop` property. The reason for this has to do with how Vue loads the on-screen objects. Without this offset, nothing would appear amiss if the canvas is at the top of the page, therefore in the starting view on page load. However, if the canvas is down the page, as it is in this tutorial, the mouse coordinates will be captured relative to the top of the page. The `offsetTop` property gets the pixel distance from the top of the page and the top of the canvas, adjusting for this error.
+Note that when we grab the event coordinates, we have to do a bit of sorcery to get the correct values due to the way different browsers handle mouseover events. 
 
 If you run this now, the diagram will work like we expect, except a bunch of weird lines will appear wherever the mouse moves. This is because we're manipulating our point array, but we're not actually making the canvas clear and re-draw with the modified array. To do this, we'll make one final small change to our `update()` method:
 
