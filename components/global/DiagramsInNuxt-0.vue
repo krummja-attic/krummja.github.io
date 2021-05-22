@@ -40,6 +40,8 @@ export default {
     },
     methods: {
         handleInput(points) {
+            // https://stackoverflow.com/a/10760593/15526907
+            // https://stackoverflow.com/a/442474/15526907
             this._ctx.canvas.onmousemove = (event) => {
                 event.preventDefault();
 
