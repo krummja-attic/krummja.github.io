@@ -39,6 +39,10 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Yellowtail&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap'
       }
     ],
     script: [
