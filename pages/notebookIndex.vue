@@ -6,7 +6,7 @@
       An assortment of notes in various states of refinement.
     </span>
 
-    <TagBlock :tags=tags />
+    <TagBlock :tags=tags :tagCounts=tagCounts />
 
     <div class="notebook">
       <ul class="note-list">
@@ -21,11 +21,6 @@
             :to="{ name: 'notebook-slug', params: { slug: note.slug } }">
 
             <NotePage :note=note />
-            <!-- <h4>{{ note.title }}</h4>
-            <div class="metadata flex flex-row">
-              <span class="date">{{ formatDate(note.createdAt) }}</span>
-              <span class="project">{{ note.project }}</span>
-            </div> -->
 
           </NuxtLink>
         </li>
@@ -48,10 +43,23 @@ export default {
   layout: 'default',
   async asyncData({ $content, params, store }) {
     
+    const tagCounts = {};
+
+    const noteTags = await $content('notebook').only(['tags']).fetch();
+
     const tags = await $content('tags', params.slug)
       .only(['title'])
       .sortBy('createdAt')
       .fetch()
+
+    tags.forEach((tag) => {
+      tagCounts[tag.title] = 0;
+    })
+
+    noteTags.forEach((note) => {
+      let tags = note.tags.split(", ");
+      tags.forEach((tag) => { tagCounts[tag] += 1 })
+    })
 
     if (store.state.tags.activeTags.length > 0) {
       const notebook = await $content('notebook', params.slug)
@@ -59,13 +67,13 @@ export default {
         .only(['title', 'createdAt', 'project', 'growth', 'repo', 'slug'])
         .sortBy('createdAt')
         .fetch()
-      return { notebook, tags }
+      return { notebook, tags, tagCounts }
     } else {
       const notebook = await $content('notebook', params.slug)
         .only(['title', 'createdAt', 'project', 'growth', 'repo', 'slug'])
         .sortBy('createdAt')
         .fetch()
-      return { notebook, tags }
+      return { notebook, tags, tagCounts }
     }
 
   },

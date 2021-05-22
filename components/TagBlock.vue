@@ -4,7 +4,7 @@
       v-for="tag of tags"
       :key="tag.slug"
     >
-      <Tag :tag-name=tag.title />
+      <Tag :tag-name=tag.title :tagCount=tagCounts[tag.title] />
     </div>
   </div>
 </template>
@@ -19,6 +19,12 @@ export default {
     tags: {
       type: Array,
       default: []
+    }, 
+    tagCounts: {
+      type: Object,
+      default () {
+        return {}
+      }
     }
   }
 }

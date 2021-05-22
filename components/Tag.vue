@@ -3,7 +3,7 @@
     @click="toggleActiveState()"
     :id="uid"
     class="tag-body flex flex-col">
-    {{ tagName }}
+    {{ tagName }} {{ tagCount }}
   </div>
 </template>
 
@@ -14,7 +14,11 @@ export default {
   props: {
     tagName: {
       type: String,
-      default: ''
+      default: '',
+    },
+    tagCount: {
+      type: Number,
+      default: 0,
     }
   },
   data () {

@@ -5,7 +5,7 @@
       This is a cultivated selection of articles and notes on a variety of topics, including linguistics, programming, writing, design - basically anything I'm currently exploring. Some articles are only Seedlings without much to them, some are Budding thoughts and sketches, and yet others are fully developed Evergreen notes with a clear thesis and discussion.
     </span>
 
-    <TagBlock :tags=tags />
+    <TagBlock :tags=tags :tagCounts=tagCounts />
 
     <div class="garden">
       <NuxtLink
@@ -32,26 +32,39 @@ export default {
   },
   async asyncData({ $content, params, store }) {
 
+    const tagCounts = {};
+
+    const articleTags = await $content('articles').only(['tags']).fetch();
+
     const tags = await $content('tags', params.slug)
       .only(['title'])
       .sortBy('createdAt')
       .fetch()
 
-    if (store.state.tags.activeTags.length > 0) {
+    tags.forEach((tag) => {
+      tagCounts[tag.title] = 0;
+    })
+
+    articleTags.forEach((article) => {
+      let tags = article.tags.split(", ");
+      tags.forEach((tag) => { tagCounts[tag] += 1 })
+    })
+
+if (store.state.tags.activeTags.length > 0) {
       const articles = await $content('articles', params.slug)
         .where({ tags: { $contains: store.state.tags.activeTags } })
         .only(['title', 'createdAt', 'growth', 'slug'])
         .sortBy('createdAt')
         .fetch()
 
-      return { articles, tags }
+      return { articles, tags, tagCounts }
     } else {
       const articles = await $content('articles', params.slug)
         .only(['title', 'createdAt', 'growth', 'slug'])
         .sortBy('createdAt')
         .fetch()
 
-      return { articles, tags }
+      return { articles, tags, tagCounts }
     }
   },
   beforeMount () {
