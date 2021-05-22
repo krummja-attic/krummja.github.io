@@ -45,30 +45,14 @@ export default {
             this._ctx.canvas.onmousemove = (event) => {
                 event.preventDefault();
 
-                let posX = 0;
-                let posY = 0;
-                
-                if (!event) var event = window.event;
-                if (event.clientX || event.clientY) {
-                    posX = event.clientX 
-                           + document.body.scrollLeft 
-                           + document.documentElement.scrollLeft;
-                    posY = event.clientY 
-                           + document.body.scrollTop 
-                           + document.documentElement.scrollTop;
-                }
-                
-                var el = event.target;
-                var _x = 0;
-                var _y = 0;
+                let el = event.target;
+                let rect = el.getBoundingClientRect();
+                let x = event.clientX - rect.left, y = event.clientY - rect.top;
 
-                while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
-                    _x += el.offsetLeft - el.scrollLeft;
-                    _y += el.offsetTop - el.scrollTop;
-                    el = el.offsetParent;
-                }
+                x *= el.width / rect.width;
+                y *= el.height / rect.height;
 
-                points[0] = [posX - _x, posY - _y];
+                points[0] = [x, y];
                 this.update(points);
             }
         },

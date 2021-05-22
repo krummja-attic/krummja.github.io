@@ -230,31 +230,14 @@ The last step is to add in the interactivity. For this, we'll make a simple even
             this._context.canvas.onmousemove = (event) => {
                 event.preventDefault();
 
-                let posX = 0;
-                let posY = 0;
-                
-                if (!event) var event = window.event;
-                if (event.clientX || event.clientY) {
-                    posX = event.clientX 
-                           + document.body.scrollLeft 
-                           + document.documentElement.scrollLeft;
-                    posY = event.clientY 
-                           + document.body.scrollTop 
-                           + document.documentElement.scrollTop;
-                }
-                
                 let el = event.target;
+                let rect = el.getBoundingClientRect();
+                let x = event.clientX - rect.left, y = event.clientY - rect.top;
 
-                let x = 0;
-                let y = 0;
+                x *= el.width / rect.width;
+                y *= el.height / rect.height;
 
-                while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
-                    x += el.offsetLeft - el.scrollLeft;
-                    y += el.offsetTop - el.scrollTop;
-                    el = el.offsetParent;
-                }
-
-                points[0] = [posX - x, posY - y];
+                points[0] = [x, y];
                 this.update(points);
             }
         },
