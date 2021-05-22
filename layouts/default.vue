@@ -114,6 +114,27 @@ html {
     }
   }
 
+  h2 {
+    color: $accent-purple-2;
+    margin-top: 30px;
+    font-size: 16pt;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: $accent-purple-2;
+    margin-top: 20px;
+    font-size: 14pt;
+    font-weight: 500;
+  }
+
+  h4 {
+    color: $accent-purple-2;
+    margin-top: 20px;
+    font-size: 14pt;
+    font-style: italic;
+  }
+
   p {
     margin-top: 20px;
   }
@@ -242,7 +263,7 @@ html {
       }
 
       &::before {
-        content: "References";
+        content: "Footnotes";
         color: $accent-purple-2;
         font-weight: bold;
         font-size: 28px;
